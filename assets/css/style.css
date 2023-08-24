@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.body {
+    margin: 0px;
+}
+
+/* Container */
+
+.container{
+    margin: auto;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    height: auto;
+}
+
+/* Notes */
+
+.notes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.notes__paragraph__intro {
+    visibility: visible;
+}
