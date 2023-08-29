@@ -1,3 +1,4 @@
+/* Main */
 *,
 *::before,
 *::after {
@@ -9,27 +10,38 @@
 }
 
 /* Container */
-
 .container{
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* Header */
-
 .header {
     width: 100%;
     height: auto;
 }
 
 /* Notes */
-
 .notes {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.notes__paragraph__intro {
-    visibility: visible;
+.notes__error {
+    display: none;
+    color: rgba(255, 0, 0, 0.847);
 }
+
+.notes__placeholder {
+    width: 1000px;
+    margin-top: 15px;
+}
+
+.notes__user__input {
+    margin: 10px auto;
+    outline: 2px solid #000;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+

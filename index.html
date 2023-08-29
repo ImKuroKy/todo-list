@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<title>ToDo list</title>
 </head>
-
 <body>
-
 	<div class="header">
 		<div class="container">
 			<div class="header__box">
@@ -17,24 +14,19 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="notes">
 		<div class="container">
 			<div class="notes__inner">
-				
 				<div class="notes__inputing">
-					<input class="input__text"  id="inputNoteHeader" type="text" placeholder="Введите заголовок" title="notes__placeholder__input">
-					<input class="input__text"  id="inputNoteText" type="text" placeholder="Введите заметку" title="notes__placeholder__input">
+					<input class="input__text"  id="inputNoteHeader" type="text" placeholder="Введите задачу" title="notes__placeholder__input">
+					<input class="input__text"  id="inputNoteAnnotation" type="text" placeholder="Введите комментарий" title="notes__placeholder__input">
 					<input class="input__button"  id="confirmButton" type="button" value="Создать заметку" title="notes__placeholder__input">
 				</div>
-				
+				<div class="notes__error">Ошибка. Пустая заметка</div>
 				<div class="notes__placeholder" id="notesPlaceholder"></div>
-			
 			</div>
 		</div>
 	</div>
-	
 	<script src="assets/scripts/script.js"></script>
 </body>
-
 </html>
