@@ -83,6 +83,14 @@ const createNote = () => {
             noteDiv.appendChild(noteParagraph);
         }
         
+        // Drag'n'Drop defining
+        noteDiv.addEventListener("dragstart", () =>
+            noteDiv.classList.add("dragging")
+        );
+        noteDiv.addEventListener("dragend", () =>
+            noteDiv.classList.remove("dragging")
+        );
+
         const noteButtons = document.createElement('div');
         noteButtons.classList.add("noteButtons");
         noteDiv.appendChild(noteButtons);
@@ -108,6 +116,16 @@ const createNote = () => {
         inputHeadder.value = "";
         inputParagraph.value = "";
     };
+};
+
+const dndNote = (e) => {
+    e.preventDefault();
+    const draggingItem = document.querySelector(".dragging");
+    let sibling = [...notesPlaceholder.querySelectorAll(".userNote:not(.dragging)")];
+    let nextSibling = sibling.find((sibling) => {
+        return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
+    });
+    notesPlaceholder.insertBefore(draggingItem, nextSibling);
 };
 
 // Adding events
