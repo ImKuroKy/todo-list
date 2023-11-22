@@ -16,17 +16,15 @@
 	</div>
 	<div class="notes">
 		<div class="container">
-			<div class="notes__inner">
-				<div class="notes__inputing">
-					<input class="input__text"  id="inputNoteHeader" type="text" placeholder="Введите задачу" title="notes__placeholder__input">
-					<input class="input__text"  id="inputNoteAnnotation" type="text" placeholder="Введите комментарий" title="notes__placeholder__input">
-					<input class="input__button"  id="confirmButton" type="button" value="Создать заметку" title="notes__placeholder__input">
-				</div>
-				<div class="notes__error">Ошибка. Пустая заметка</div>
-				<div class="notes__placeholder" id="notesPlaceholder"></div>
+			<div class="notes__inputing">
+				<input class="input__text" id="inputNoteHeader" type="text" placeholder="Введите задачу"/>
+				<input class="input__text" id="inputNoteAnnotation" type="text" placeholder="Введите комментарий"/>
+				<button class="input__button" id="inputButton" type="button">Создать заметку</button> 
 			</div>
+			<div class="notes__error">Ошибка. У записки должен быть хотя бы заголовок</div>
+			<div class="notes__placeholder" id="notesPlaceholder"></div>
 		</div>
 	</div>
-	<script src="assets/scripts/script.js"></script>
+	<script src="assets/scripts/note.js"></script>
 </body>
 </html>
